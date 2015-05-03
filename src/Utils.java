@@ -18,7 +18,6 @@ import javax.swing.JTextField;
 public class Utils {
 
 	public static String id = "ddf98bef29f07678c4677cbe639b0768";
-	public static String params = "api_dev_key=" + id + "&api_option=paste&param3=salut";
 
 	public static void paste(JTextArea textArea) {
 		String text = getTextFromClipboard();
@@ -47,7 +46,7 @@ public class Utils {
 		PastebinPost post = new PastebinPost();
 		post.put("api_dev_key", id);
 		post.put("api_option", "paste");
-		post.put("api_paste_code", "salut");
+		post.put("api_paste_code", text);
 		post.put("api_paste_private", "0");
 		
 		String url = getContents("http://pastebin.com/api/api_post.php", post);

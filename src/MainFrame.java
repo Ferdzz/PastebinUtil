@@ -53,6 +53,8 @@ public class MainFrame extends JFrame {
 		panel.setLayout(new BorderLayout(0, 0));
 		
 		textField = new JTextField();
+		textField.setToolTipText("Your link will appear here");
+		textField.setEditable(false);
 		contentPane.add(textField, BorderLayout.NORTH);
 		textField.setColumns(10);
 		
